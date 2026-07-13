@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Navbar() {
   return (
@@ -20,12 +21,15 @@ export default function Navbar() {
           <Link href="/contact">Contact Us</Link>
         </li>
       </ul>
-      <Link
-        href="/contact"
-        className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
-      >
-        Book Now
-      </Link>
+      <div className="flex items-center gap-4">
+        <Link
+          href="/contact"
+          className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+        >
+          Book Now
+        </Link>
+        <ThemeToggle />
+      </div>
     </nav>
   );
 }
