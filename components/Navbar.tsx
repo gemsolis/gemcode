@@ -1,13 +1,32 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="flex items-center justify-between px-16 py-6 bg-white dark:bg-black">
-      <ul className="flex items-center gap-8 text-base font-medium text-black dark:text-zinc-50">
-        <li>
-          <Link href="/">Home</Link>
-        </li>
+    <nav
+      className={`sticky top-0 z-50 flex items-center justify-between gap-4 border-b border-black/[.08] bg-white/80 px-6 py-6 backdrop-blur-md transition-shadow duration-300 sm:px-16 dark:border-white/[.145] dark:bg-black/80 ${
+        scrolled ? "shadow-md" : "shadow-none"
+      }`}
+    >
+      <Link
+        href="/"
+        className="text-lg font-semibold tracking-tight text-black dark:text-zinc-50"
+      >
+        GemCode
+      </Link>
+      <ul className="hidden items-center gap-8 text-base font-medium text-black md:flex dark:text-zinc-50">
         <li>
           <Link href="/about">About</Link>
         </li>

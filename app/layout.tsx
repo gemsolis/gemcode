@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
-import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 const THEME_INIT_SCRIPT = `
@@ -49,7 +48,6 @@ export default function RootLayout({
         <Script id="theme-init" strategy="beforeInteractive">
           {THEME_INIT_SCRIPT}
         </Script>
-        <Navbar />
         {children}
       </body>
     </html>

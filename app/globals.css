@@ -17,6 +17,29 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* The Authority Agency brand palette (Brand Guidelines V2, 2026) */
+  --color-authority-navy: #5e1452;
+  --color-authority-navy-light: #82458a;
+  --color-authority-purple: #82458a;
+  --color-authority-purple-light: #cdb5d0;
+  --color-authority-purple-tint: #e5d9e8;
+  --color-authority-teal: #038282;
+  --color-authority-teal-dark: #034a4a;
+  --color-authority-teal-tint: #d6ebeb;
+  --color-authority-green: #008f6b;
+  --color-authority-green-dark: #053b2e;
+  --color-authority-lime: #bfeb7a;
+  --color-authority-lime-tint: #e5f7c9;
+  --color-authority-gold: #f5b803;
+  --color-authority-gold-dark: #c99500;
+  --color-authority-gold-tint: #fad466;
+  --color-authority-pink: #bf146b;
+  --color-authority-pink-tint: #e5a1c4;
+
+  --font-authority-sans: var(--font-oswald);
+  --font-authority-body: var(--font-poppins);
+  --font-authority-script: var(--font-covered-by-your-grace);
 }
 
 body {
